@@ -1,0 +1,41 @@
+/* BY VELOXS.COM */
+
+.navbar-toggler:focus {
+	box-shadow: unset;
+}
+
+.textrespon {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+
+.has-fixed:not(.is-dark) .header-main {
+	background: #FFF;
+}
+
+.has-fixed.is-shrink .header-main {
+	padding: 2px 0;
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+.preloader:before,
+.preloader:after {
+	background: #08091b;
+}
