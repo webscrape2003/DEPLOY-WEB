@@ -215,69 +215,6 @@ Klik Disini" />
 
 
 
-
-<head>
-  <meta charset="UTF-8">
-  <title>Copy Text Box</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f9f9f9;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 10px;
-      font-size: 16px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      resize: none;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>📋 Copy Text Box</h2>
-    <textarea id="textBox">Hello, copy this text by clicking the button below.</textarea>
-    <button onclick="copyText()">Copy</button>
-  </div>
-
-  <script>
-    function copyText() {
-      const textArea = document.getElementById("textBox");
-      textArea.select();
-      textArea.setSelectionRange(0, 99999); // for mobile
-      document.execCommand("copy");
-
-      // Optional alert or toast
-      alert("✅ Text copied!");
-    }
-  </script>
-</body>
-
-
 								
 								
 							<div class="copyright-text copyright-text-s3 pdt-m text-center">
