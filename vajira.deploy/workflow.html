@@ -119,6 +119,61 @@ Klik Disini" />
 </head>
 
 
+<div class="container">
+    <h2>📋 Copy Text Box</h2>
+    <textarea id="textBox">name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start</textarea>
+    <button onclick="copyText()">Copy</button>
+  </div>
+
+<script>								
+    function copyText() {
+      const textArea = document.getElementById("textBox");
+      textArea.select();
+      textArea.setSelectionRange(0, 99999); // for mobile
+      document.execCommand("copy");
+
+      // Optional alert or toast
+      alert("✅ Text copied!");
+    }
+
+</script>
+
+
+
+
+	
 <body class="nk-body body-wider theme-dark mode-onepage">
 
 	<div class="nk-wrap">
@@ -250,63 +305,7 @@ Klik Disini" />
 								</div>
 
 								<p>You can now deploy VAJIRA-MD in workflow platform. no banned, no crash and no bugs. you can enjoy after Deploy in Workflow super fast amd secure your accounts. enjoy guys good luck! <a href="https://github.com">Click Here</a> Create a account.</p>								<hr>
-								
-
-
-
-
-
-  <div class="container">
-    <h2>📋 Copy Text Box</h2>
-    <textarea id="textBox">name: Node.js CI
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Start application
-      run: npm start</textarea>
-    <button onclick="copyText()">Copy</button>
-  </div>
-
-  <script>
-    function copyText() {
-      const textArea = document.getElementById("textBox");
-      textArea.select();
-      textArea.setSelectionRange(0, 99999); // for mobile
-      document.execCommand("copy");
-
-      // Optional alert or toast
-      alert("✅ Text copied!");
-    }
-  </script>
-
-
+						
 								
 
 								
