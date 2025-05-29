@@ -214,6 +214,29 @@ Klik Disini" />
 								
 
 
+<!-- COPY TEXT BOX -->
+<div class="card shadow blog p-2 mb-3">
+  <div class="d-grid">
+    <textarea id="copyText" class="form-control" rows="4" readonly>VAJIRA-MD BEST WHATSAPP BOT ✨
+
+Github: https://github.com/VajiraOfficialBot/VAJIRA-MD
+Website: https://vajira-md.vercel.app
+Support: https://wa.me/94715166712
+    </textarea>
+    <button onclick="copyToClipboard()" class="btn btn-success mt-2"><i class="uil-copy"></i> Copy Text</button>
+  </div>
+</div>
+
+<!-- COPY SCRIPT -->
+<script>
+function copyToClipboard() {
+  const copyText = document.getElementById("copyText");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+  alert("✅ Text copied:\n" + copyText.value);
+}
+</script>
 
 								
 								
