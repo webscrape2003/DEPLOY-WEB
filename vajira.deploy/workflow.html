@@ -214,11 +214,7 @@ Klik Disini" />
 								
 
 
-
-
-
-
-  <style>
+<style>
     body {
       font-family: Arial, sans-serif;
       padding: 30px;
@@ -255,11 +251,43 @@ Klik Disini" />
       background-color: #45a049;
     }
   </style>
-</head>
+
 <body>
   <div class="container">
     <h2>📋 Copy Text Box</h2>
-    <textarea id="textBox">Hello, copy this text by clicking the button below.</textarea>
+    <textarea id="textBox">name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start</textarea>
     <button onclick="copyText()">Copy</button>
   </div>
 
@@ -276,12 +304,7 @@ Klik Disini" />
   </script>
 </body>
 
-
-
-
-
-
-
+								
 
 								
 							<div class="copyright-text copyright-text-s3 pdt-m text-center">
