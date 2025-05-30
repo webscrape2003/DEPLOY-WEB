@@ -214,7 +214,105 @@
 	<div class="preloader"><span class="spinner spinner-round"></span></div>
 
 	<!-- JavaScript -->
-	<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vajiratech" data-description="Support me on Buy me a coffee!" data-message="You can donate me by buying me a coffee..." data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+       <!--    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vajiratech" data-description="Support me on Buy me a coffee!" data-message="You can donate me by buying me a coffee..." data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script> -->
+	
+	
+	
+	
+
+  <style>
+    .support-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 16px 20px;
+      z-index: 9999;
+      width: 280px;
+      max-width: 90%;
+      font-family: 'Segoe UI', sans-serif;
+      transition: transform 0.3s ease;
+    }
+
+    .support-box h4 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      color: #BD5FFF;
+    }
+
+    .support-box p {
+      font-size: 14px;
+      margin: 0 0 12px;
+      color: #333;
+    }
+
+    .support-box button {
+      background-color: #BD5FFF;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .support-box button:hover {
+      background-color: #a045dd;
+    }
+
+    /* Hide actual widget container */
+    #bmc-container {
+      display: none;
+    }
+  </style>
+
+<body>
+
+  <div class="support-box">
+    <h4>☕ Support Me</h4>
+    <p>You can donate me by buying me a coffee. Your support means a lot!</p>
+    <button onclick="openBMCWidget()">Buy Me a Coffee</button>
+  </div>
+
+  <div id="bmc-container">
+    <script data-name="BMC-Widget" 
+            data-cfasync="false" 
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+            data-id="vajiratech" 
+            data-description="Support me on Buy me a coffee!" 
+            data-message="You can donate me by buying me a coffee..." 
+            data-color="#BD5FFF" 
+            data-position="Right" 
+            data-x_margin="18" 
+            data-y_margin="18">
+    </script>
+  </div>
+
+  <script>
+    function openBMCWidget() {
+      const bmcScript = document.querySelector('#bmc-container script');
+      if (bmcScript) {
+        bmcScript.setAttribute("data-position", "Center");
+        bmcScript.setAttribute("data-x_margin", "0");
+        bmcScript.setAttribute("data-y_margin", "0");
+        bmcScript.setAttribute("data-color", "#BD5FFF");
+
+        // Trigger widget programmatically
+        const evt = new CustomEvent('BMC::Open');
+        window.dispatchEvent(evt);
+      }
+    }
+  </script>
+
+</body>
+
+	
+	
+	
+	
 	<script src="theme/frontend/crypto-dark-v3/assets/js/jquery.bundle.js" type="7f9fd639a84908e3bc4fdac7-text/javascript"></script>
 	<script src="theme/frontend/crypto-dark-v3/assets/js/scripts.js" type="7f9fd639a84908e3bc4fdac7-text/javascript"></script>
 	<script src="theme/frontend/crypto-dark-v3/assets/js/charts.js" type="7f9fd639a84908e3bc4fdac7-text/javascript"></script>
