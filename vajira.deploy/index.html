@@ -162,7 +162,86 @@
 							</div>
 						</div>
 					</div>
-				</div><!-- .nk-banner -->
+				</div>
+				
+				
+				
+				<!-- 3D COMMENT BOX -->
+<div class="comment-container">
+  <h2>💬 Leave a Comment</h2>
+  <form class="comment-form">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Write your comment..." rows="4" required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+</div>
+
+<!-- STYLING -->
+<style>
+.comment-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: rotateY(0deg) rotateX(0deg);
+  transform-style: preserve-3d;
+  animation: flipIn 1s ease forwards;
+  perspective: 1000px;
+}
+
+.comment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.comment-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+</style>
+
+				
+				<!-- .nk-banner -->
 				<div class="nk-ovm mask-c-light shape-v mask-contain-bottom"></div>
 
 				<!-- Place Particle Js -->
