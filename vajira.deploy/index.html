@@ -218,6 +218,137 @@
 	
 	
 	
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Floating Comment Icon */
+    .comment-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #BD5FFF;
+      color: #fff;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    /* Popup Box */
+    .comment-popup {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 20px;
+      display: none;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .comment-popup h3 {
+      margin-top: 0;
+      color: #BD5FFF;
+      font-size: 18px;
+    }
+
+    .comment-popup p {
+      font-size: 14px;
+      color: #444;
+      margin: 10px 0 20px;
+    }
+
+    .comment-popup button {
+      background-color: #BD5FFF;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .comment-popup .close-btn {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    /* Hide actual BMC widget script */
+    #bmc-script { display: none; }
+  </style>
+
+  <!-- Font Awesome for icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	
+
+  <!-- Floating Icon Button -->
+  <div class="comment-float" onclick="togglePopup()">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+
+  <!-- Custom Comment Popup -->
+  <div class="comment-popup" id="commentBox">
+    <button class="close-btn" onclick="togglePopup()">&times;</button>
+    <h3>Support Me 💜</h3>
+    <p>You can donate me by buying me a coffee... Every bit helps and is appreciated!</p>
+    <button onclick="openBMCWidget()">☕ Buy Me a Coffee</button>
+  </div>
+
+  <!-- Hidden BMC widget -->
+  <div id="bmc-script">
+    <script data-name="BMC-Widget" 
+            data-cfasync="false" 
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+            data-id="vajiratech" 
+            data-description="Support me on Buy me a coffee!" 
+            data-message="You can donate me by buying me a coffee..." 
+            data-color="#BD5FFF" 
+            data-position="Right" 
+            data-x_margin="18" 
+            data-y_margin="18">
+    </script>
+  </div>
+
+  <script>
+    function togglePopup() {
+      const box = document.getElementById('commentBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function openBMCWidget() {
+      togglePopup(); // Close the popup
+      const event = new CustomEvent('BMC::Open');
+      window.dispatchEvent(event);
+    }
+  </script>
+
+
+
+
 	
 	
 	
